@@ -28,7 +28,12 @@ var TasksComponent = /** @class */ (function () {
             title: this.title,
             author: this.author,
             section: this.section,
-            isbn: this.isbn
+            isbn: this.isbn,
+            respRate: this.respRate,
+            bloodPress: this.bloodPress,
+            tipOfDay: this.tipOfDay,
+            emergEmail: this.emergEmail,
+            dateCreated: this.dateCreated
         };
         this.taskService.addTask(newTask)
             .subscribe(function (task) {

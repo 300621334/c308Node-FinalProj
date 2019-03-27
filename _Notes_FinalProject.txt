@@ -5,6 +5,10 @@ Also keep mongod running
 ------------------
 Run _1_NgApp >> npm start >> localhost:3000
 Then run _2_API >> nodemon app.js
+
+aft changes to .ts files (even thou I get err but still compiles .ts to .js):
+cd client >>npm start
+cd app>>npm start
 ---------------------------------------------
 open chrome to allow CORS:
 "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" --user-data-dir="C:/Chrome dev session" --disable-web-security

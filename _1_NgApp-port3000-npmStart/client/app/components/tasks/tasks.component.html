@@ -1,10 +1,10 @@
 <h1>Add Vitals</h1>
 <form class="well" >
         <div class="form-group">
-          <input type="text" [(ngModel)]="title" name="title" class="form-control" placeholder="coursecode"> 
-          <input type="text" [(ngModel)]="isbn"  name="isbn" class="form-control" placeholder="coursename">  
-          <input type="text" [(ngModel)]="section"  name="section" class="form-control" placeholder="section">  
-          <input type="text" [(ngModel)]="author"  name="author" class="form-control" placeholder="semester">   
+          <input type="text" [(ngModel)]="title" name="title" class="form-control" placeholder="Patient ID"> 
+          <input type="text" [(ngModel)]="isbn"  name="isbn" class="form-control" placeholder="Patient Name">  
+          <input type="text" [(ngModel)]="section"  name="section" class="form-control" placeholder="Temperature">  
+          <input type="text" [(ngModel)]="author"  name="author" class="form-control" placeholder="Heart Rate">   
 
           <input type="text" [(ngModel)]="respRate"  name="section" class="form-control" placeholder="Respiratory Rate">  
           <input type="text" [(ngModel)]="bloodPress"  name="author" class="form-control" placeholder="Blood Pressure">
@@ -28,16 +28,18 @@
             <table class="table table-bordered table-striped table-hover">
                 <!-- Header Row-->
                 <tr>
-                    <th class="text-center">Course Title</th>
-                    <th class="text-center">Semister</th>
-                    <th class="text-center">Section</th>
-                    <th class="text-center">Course Code</th>
+                    <th class="text-center">Patient ID</th>
+                    <th class="text-center">Patient Name</th>
+                    <th class="text-center">Temperature</th>
+                    <th class="text-center">Heart Rate</th>
+                    
+                    
 
-                    <th class="text-center">Course Title</th>
-                    <th class="text-center">Semister</th>
-                    <th class="text-center">Section</th>
-                    <th class="text-center">Course Code</th>
-                    <th class="text-center">Course Code</th>
+                    <th class="text-center">Respiratory</th>
+                    <th class="text-center">Blood Pressure</th>
+                    <th class="text-center">Tip-Video</th>
+                    <th class="text-center">Emergency Email</th>
+                    <th class="text-center">Reading Date</th>
                     <th class="text-center"></th>
                    
                 </tr>
@@ -45,9 +47,11 @@
                 <!-- Repeatable Template Row -->
                     <tr *ngFor="let task of tasks">
                         <td class="text-center">{{task.title}}</td>
-                        <td class="text-center">{{task.author}}</td>
-                        <td class="text-center">{{task.section}}</td>
                         <td class="text-center">{{task.isbn}}</td>
+                        <td class="text-center">{{task.section}}</td>
+                        <td class="text-center">{{task.author}}</td>
+                        
+                        
 
                        <td class="text-center">{{task.respRate}}</td>
                         <td class="text-center">{{task.bloodPress}}</td>
