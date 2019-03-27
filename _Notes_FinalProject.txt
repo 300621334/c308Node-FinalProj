@@ -1,7 +1,5 @@
-whole app is cached in "\public\js\app\bundle.js" causing old app to b served!!!!!!
-Solu is to keep running following cmd in a dedicated terminal:
->>>npm run build
-Also keep mongod running
+================================
+cmd >> mongod
 ================================
 cd _1_NgApp >> npm start >> localhost:3000
 Then run _2_API >> nodemon app.js
@@ -10,11 +8,16 @@ aft changes to .ts files (even thou I get err but still compiles .ts to .js):
 cd client >>npm start
 cd app>>npm start
 ================================
-cd _2_API-port8080-nodemonAppJs
->>>npm run build
-
 cmd >> cd _2_API-port8080-nodemonAppJs
 >>>npm start
+------
+cd _2_API-port8080-nodemonAppJs
+>>>npm run build
+------
+whole app is cached in "\public\js\app\bundle.js" causing old app to b served!!!!!!
+Solu is to keep running following cmd in a dedicated terminal:
+>>>npm run build
+Also keep mongod running
 ================================
 open chrome to allow CORS:
 "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" --user-data-dir="C:/Chrome dev session" --disable-web-security
