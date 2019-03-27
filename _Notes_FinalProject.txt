@@ -1,0 +1,11 @@
+whole app is cached in "\public\js\app\bundle.js" causing old app to b served!!!!!!
+Solu is to keep running following cmd in a dedicated terminal:
+>>>npm run build
+Also keep mongod running
+------------------
+Run _1_NgApp >> npm start >> localhost:3000
+Then run _2_API >> nodemon app.js
+---------------------------------------------
+open chrome to allow CORS:
+"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" --user-data-dir="C:/Chrome dev session" --disable-web-security
+-------------------

@@ -1,0 +1,46 @@
+<h1>Add Course </h1>
+<form class="well" >
+        <div class="form-group">
+          <input type="text" [(ngModel)]="title" name="title" class="form-control" placeholder="coursecode"> 
+          <input type="text" [(ngModel)]="isbn"  name="isbn" class="form-control" placeholder="coursename">  
+          <input type="text" [(ngModel)]="section"  name="section" class="form-control" placeholder="section">  
+          <input type="text" [(ngModel)]="author"  name="author" class="form-control" placeholder="semester">   
+          <input class="btn btn-success my-2 my-sm-0" type="submit" (click)="addTask($event)"  value="submit" >      
+        </div>  
+  </form>
+  
+<div class="container">
+    <div class="row">
+        <div class="col-md-offset-3 col-md-8">
+            <h1>Course List</h1>
+            
+            <br>
+            <table class="table table-bordered table-striped table-hover">
+                <!-- Header Row-->
+                <tr>
+                    <th class="text-center">Course Title</th>
+                    <th class="text-center">Semister</th>
+                    <th class="text-center">Section</th>
+                    <th class="text-center">Course Code</th>
+                    <th class="text-center"></th>
+                   
+                </tr>
+  
+                <!-- Repeatable Template Row -->
+                    <tr *ngFor="let task of tasks">
+                        <td class="text-center">{{task.title}}</td>
+                        <td class="text-center">{{task.author}}</td>
+                        <td class="text-center">{{task.section}}</td>
+                        <td class="text-center">{{task.isbn}}</td>
+                       
+  
+                        <td class="text-center">
+                                <input class="btn btn-danger" type="button" (click)="deleteTask(task._id)"  value='Delete' >      
+                                   
+                                </td>
+                    </tr>
+            </table>
+  
+        </div>
+    </div>
+  </div>

@@ -1,0 +1,82 @@
+<h2>Hello {{fullname}} </h2>
+<hr>
+<style>
+    [class="col-md-3"] {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        background-color: rgba(86, 61, 124, .15);
+        border: 1px solid rgba(86, 61, 124, .2);
+    }
+
+    [class="col-md-6"] {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        background-color: rgba(86, 61, 124, .15);
+        border: 1px solid rgba(86, 61, 124, .2);
+    }
+</style>
+<h4 class="page-header">Course Enrolled</h4>  
+<a class="btn btn-primary" href="http://localhost:3000/" role="button"><i class="fa fa-plus-square"></i>ADD Course</a>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-offset-3 col-md-8">  
+            <table class="table table-bordered table-striped table-hover">
+                <!-- Header Row-->
+                <tr>
+                    <th class="text-center">Course Title</th>
+                    <th class="text-center">Semister</th>
+                    <th class="text-center">Section</th>
+                    <th class="text-center">Course Code</th>
+                    <th class="text-center"></th>                   
+                </tr>  
+                <!-- Repeatable Template Row -->
+                    <tr *ngFor="let book of _books">
+                        <td class="text-center">{{book.title}}</td>
+                        <td class="text-center">{{book.author}}</td>
+                        <td class="text-center">{{book.section}}</td>
+                        <td class="text-center">{{book.isbn}}</td> 
+                        <td class="text-center">
+                            <button class="btn btn-warning" (click)="onRemove(book.isbn)">Remove</button>                                   
+                         </td>
+                    </tr>
+            </table>  
+        </div>
+    </div>
+  </div>
+
+<hr>
+<button class="btn btn-success" (click)="onSave()">Save</button>
+<button class="btn btn-warning" (click)="onReset()">Reset</button>
+<hr>
+<h4 class="page-header">Available Course</h4>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-offset-3 col-md-8">  
+            <table class="table table-bordered table-striped table-hover">
+                <!-- Header Row-->
+                <tr>
+                    <th class="text-center">Course Title</th>
+                    <th class="text-center">Semister</th>
+                    <th class="text-center">Section</th>
+                    <th class="text-center">Course Code</th>
+                    <th class="text-center"></th>                   
+                </tr>  
+                <!-- Repeatable Template Row -->
+                    <tr *ngFor="let book of _availablebooks">
+                        <td class="text-center">{{book.title}}</td>
+                        <td class="text-center">{{book.author}}</td>
+                        <td class="text-center">{{book.section}}</td>
+                        <td class="text-center">{{book.isbn}}</td> 
+                        <td class="text-center">
+                            <button class="btn btn-success" (click)="onAdd(book.isbn)">Add</button>                                 
+                         </td>
+                    </tr>
+            </table>  
+        </div>
+    </div>
+  </div>
+
+
