@@ -11,16 +11,16 @@
             <a class="nav-link" *ngIf ="isLoggedIn()" (click)="dologout()" >Logout</a>
           </li>    
           <li class="nav-item ">
-              <a class="nav-link" routerLinkActive="active" [routerLink]="['/home']" *ngIf ="isLoggedIn()">_Home.</a>
+              <a class="nav-link" routerLinkActive="active" [routerLink]="['/home']" *ngIf ="isLoggedIn()">Home</a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" routerLinkActive="active" [routerLink]="['/book']" *ngIf ="isLoggedIn()">_Course</a>
+            <a class="nav-link" routerLinkActive="active" [routerLink]="['/book']" *ngIf ="isLoggedIn()">Course</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" routerLinkActive="active" [routerLink]="['/login']" *ngIf ="!isLoggedIn()">_Login.</a>
+            <a class="nav-link" routerLinkActive="active" [routerLink]="['/login']" *ngIf ="!isLoggedIn()">Login</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLinkActive="active" [routerLink]="['/hero']" *ngIf ="!isLoggedIn()">_Hero</a>
+            <a class="nav-link" routerLinkActive="active" [routerLink]="['/hero']" *ngIf ="!isLoggedIn()">Hero</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" routerLinkActive="active" [routerLink]="['/book']" *ngIf ="!isLoggedIn()">Task</a>

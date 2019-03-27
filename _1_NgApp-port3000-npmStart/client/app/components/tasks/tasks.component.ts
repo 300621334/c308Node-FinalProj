@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Course } from '../../../task'
 import { TaskService } from '../../services/task.service'
+import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 @Component({
   moduleId: module.id,
   selector: 'tasks',
@@ -14,6 +15,13 @@ export class TasksComponent {
   author:string;
   section:string;
   isbn:string;
+  //
+   respRate:string;  
+ bloodPress:string;
+   tipOfDay:string;  
+ emergEmail:string;
+dateCreated:string;
+
   constructor(private taskService: TaskService) {
     this.taskService.getTasks()
       .subscribe(tasks => {
@@ -28,7 +36,13 @@ export class TasksComponent {
       title: this.title,
       author: this.author,
       section: this.section,
-      isbn: this.isbn
+      isbn: this.isbn,
+      //
+        respRate:this.respRate,
+      bloodPress:this.bloodPress,
+        tipOfDay:this.tipOfDay,
+      emergEmail:this.emergEmail,
+     dateCreated:this.dateCreated
   }
   
   this.taskService.addTask(newTask)
@@ -38,6 +52,12 @@ export class TasksComponent {
           this.section = '';
           this.section = '';
           this.isbn = '';
+          //
+             this.respRate = '';
+           this.bloodPress = '';
+             this.tipOfDay = '';
+           this.emergEmail = '';
+          this.dateCreated = '';
       });
 
   }

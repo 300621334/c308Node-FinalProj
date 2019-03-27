@@ -29,7 +29,7 @@ router.post('/tasks', function(req, res, next){
             "error": "Bad Data"
         });
     } else {
-        
+        //https://mongoosejs.com/docs/models.html#constructing-documents
         courseModel.create(task, function(err, task){
             if(err){
                 res.send(err);

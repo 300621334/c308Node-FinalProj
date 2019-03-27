@@ -1,18 +1,27 @@
-<h1>Add Course </h1>
+<h1>Add Vitals</h1>
 <form class="well" >
         <div class="form-group">
-          <input type="text" [(ngModel)]="title" name="title" class="form-control" placeholder="coursecode"> 
-          <input type="text" [(ngModel)]="isbn"  name="isbn" class="form-control" placeholder="coursename">  
-          <input type="text" [(ngModel)]="section"  name="section" class="form-control" placeholder="section">  
-          <input type="text" [(ngModel)]="author"  name="author" class="form-control" placeholder="semester">   
-          <input class="btn btn-success my-2 my-sm-0" type="submit" (click)="addTask($event)"  value="submit" >      
+          <input type="text" [(ngModel)]="title" name="title" class="form-control" placeholder="Patient ID"> 
+          <input type="text" [(ngModel)]="isbn"  name="isbn" class="form-control" placeholder="Patient Name">  
+          <input type="text" [(ngModel)]="section"  name="section" class="form-control" placeholder="Temperature">  
+          <input type="text" [(ngModel)]="author"  name="author" class="form-control" placeholder="Heart Rate">
+
+          <input type="text" [(ngModel)]="respRate"  name="section" class="form-control" placeholder="Respiratory Rate">  
+          <input type="text" [(ngModel)]="bloodPress"  name="author" class="form-control" placeholder="Blood Pressure">
+
+          <input type="text" [(ngModel)]="tipOfDay"  name="section" class="form-control" placeholder="Tip-Video">  
+          <input type="text" [(ngModel)]="emergEmail"  name="author" class="form-control" placeholder="Emergency Email">
+
+          <input type="text" [(ngModel)]="dateCreated"  name="author" class="form-control" placeholder="Date">
+
+          <input class="btn btn-success my-2 my-sm-0" type="submit" (click)="addTask($event)"  value="SAVE" >      
         </div>  
   </form>
   
 <div class="container">
     <div class="row">
         <div class="col-md-offset-3 col-md-8">
-            <h1>Course List</h1>
+            <h1>Patient List</h1>
             
             <br>
             <table class="table table-bordered table-striped table-hover">

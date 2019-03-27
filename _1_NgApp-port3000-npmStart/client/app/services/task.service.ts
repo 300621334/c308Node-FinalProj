@@ -12,7 +12,7 @@ export class TaskService {
             .map(res => res.json());
     }
 
-    addTask(newTask){
+    addTask(newTask){//in db see collection 'books'
         var headers = new Headers();
         headers.append('Content-Type', 'application/json');
         return this.http.post('/api/tasks', JSON.stringify(newTask), {headers: headers})
