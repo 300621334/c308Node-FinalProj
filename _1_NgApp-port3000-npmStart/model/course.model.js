@@ -10,18 +10,14 @@ var bookSchema = new Schema(
             },
            
             author:{
-                type: String,
-                required: true,
-                unique: false
+                type: String
             },
             section:{
                 type: String          
                
             },
             isbn: {
-                type:String,
-                required: true,
-                unique: true
+                type:String
             },
             respRate:{
                 type: String          
