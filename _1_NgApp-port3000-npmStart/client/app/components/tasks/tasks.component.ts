@@ -14,6 +14,12 @@ export class TasksComponent {
   author:string;
   section:string;
   isbn:string;
+  respRate:string;  
+  bloodPress:string;
+    tipOfDay:string;  
+  emergEmail:string;
+ dateCreated:string;
+ 
   constructor(private taskService: TaskService) {
     this.taskService.getTasks()
       .subscribe(tasks => {
@@ -28,7 +34,13 @@ export class TasksComponent {
       title: this.title,
       author: this.author,
       section: this.section,
-      isbn: this.isbn
+      isbn: this.isbn,
+      respRate:this.respRate,
+      bloodPress:this.bloodPress,
+        tipOfDay:this.tipOfDay,
+      emergEmail:this.emergEmail,
+     dateCreated:this.dateCreated
+
   }
   
   this.taskService.addTask(newTask)

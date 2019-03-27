@@ -22,6 +22,21 @@ var bookSchema = new Schema(
                 type:String,
                 required: true,
                 unique: true
+            },
+            respRate:{
+                type: String          
+            },
+            bloodPress:{
+                type: String          
+            },
+            tipOfDay:{
+                type: String          
+            },
+            emergEmail:{
+                type: String          
+            },
+            dateCreated:{
+                type: String          
             }
      },
     {
