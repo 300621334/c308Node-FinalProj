@@ -4,4 +4,10 @@ export class Course{
     author:string;
     section:string;
     isbn:string;
+    
+    respRate:string;  
+    bloodPress:string;
+      tipOfDay:string;  
+    emergEmail:string;
+   dateCreated:string;
 }
