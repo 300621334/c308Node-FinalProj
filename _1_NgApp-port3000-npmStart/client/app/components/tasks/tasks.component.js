@@ -12,6 +12,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var task_service_1 = require("../../services/task.service");
 var TasksComponent = /** @class */ (function () {
+    //isPatient:boolean;//only nurse can see records of ALL patients
     //isNurse:boolean;
     function TasksComponent(taskService) {
         var _this = this;
@@ -20,8 +21,8 @@ var TasksComponent = /** @class */ (function () {
             .subscribe(function (tasks) {
             //console.log(tasks);//doesn't write to console:https://stackoverflow.com/questions/37869496/console-log-not-working-in-angular2-component-typescript
             _this.tasks = tasks.course;
-            _this.userId = tasks.userId;
-            _this.isPatient = String(_this.userId).charAt(0) !== '9';
+            _this.title = _this.userId = tasks.userId;
+            //this.isPatient = String(this.userId).charAt(0) !== '9';
             //this.isNurse = !(this.isPatient);
         });
     }

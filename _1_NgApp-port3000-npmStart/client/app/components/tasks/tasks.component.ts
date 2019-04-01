@@ -20,7 +20,7 @@ export class TasksComponent {
   emergEmail:string;
  dateCreated:string;
  userId:string;//
- isPatient:boolean;//only nurse can see records of ALL patients
+ //isPatient:boolean;//only nurse can see records of ALL patients
  //isNurse:boolean;
 
   constructor(private taskService: TaskService) {
@@ -28,8 +28,8 @@ export class TasksComponent {
       .subscribe(tasks => {
         //console.log(tasks);//doesn't write to console:https://stackoverflow.com/questions/37869496/console-log-not-working-in-angular2-component-typescript
         this.tasks = tasks.course;
-        this.userId = tasks.userId;
-        this.isPatient = String(this.userId).charAt(0) !== '9';
+        this.title = this.userId = tasks.userId;
+        //this.isPatient = String(this.userId).charAt(0) !== '9';
         //this.isNurse = !(this.isPatient);
       });
   }

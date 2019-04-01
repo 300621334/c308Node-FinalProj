@@ -1,7 +1,7 @@
 <h1>Add Vitals</h1>
 <form class="well" >
         <div class="form-group">
-          <input type="text" [(ngModel)]="title" name="title" class="form-control" placeholder="Patient ID"> 
+          <input type="text" [readonly]="userId" [(ngModel)]="title" name="title" class="form-control" placeholder="Patient ID"> 
           <input type="text" [(ngModel)]="isbn"  name="isbn" class="form-control" placeholder="Patient Name">  
           <input type="text" [(ngModel)]="section"  name="section" class="form-control" placeholder="Temperature">  
           <input type="text" [(ngModel)]="author"  name="author" class="form-control" placeholder="Heart Rate">   
