@@ -1,12 +1,12 @@
 ================================
 cmd >> mongod
+Login page is at port=8080...
 ================================
 cd _1_NgApp >> npm start >> localhost:3000
 Then run _2_API >> nodemon app.js
 ------
 aft changes to .ts files (even thou I get err but still compiles .ts to .js):
 cd client >>npm start
-cd app>>npm start
 ================================
 cmd >> cd _2_API-port8080-nodemonAppJs
 >>>npm start

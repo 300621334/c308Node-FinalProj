@@ -21,13 +21,13 @@ export class LoginComponent {
             0,
             ''
         );
-        this.authService.login(user)
+        this.authService.login(user)//send only uName/pw -&- fetch rest of fields from db
             .subscribe(
-                data => {
+                data => {//File auth.routes.js >> return res.json({user,token});
                     localStorage.setItem("token", data.token);
                     localStorage.setItem('username', data.user.username);
                     localStorage.setItem('fullname', data.user.fullname);
-                    localStorage.setItem("studentid", data.user.studentid);
+                    localStorage.setItem("studentid", data.user.studentid);//use to diff bw nurse & patient
                     localStorage.setItem("user",JSON.stringify(data.user));
                     this.router.navigateByUrl('/home');
                 },

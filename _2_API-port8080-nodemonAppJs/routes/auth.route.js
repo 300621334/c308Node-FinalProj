@@ -14,6 +14,7 @@ router.post('/login', function (req, res, next) {
                 user   : user
             });
         }
+        //http://www.passportjs.org/docs/login/
        req.login(user, {session: false}, (err) => {
            if (err) {
                res.send(err);

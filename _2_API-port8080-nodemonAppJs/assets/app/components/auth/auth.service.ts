@@ -16,14 +16,14 @@ export class AuthService {
     register(user: User) {
         const body = JSON.stringify(user);
         return this.http.post('http://localhost:8080/auth/register', body, {headers: headers})
-            .map((response: Response) => response.json())
+            .map((response: Response) => response.json()) 
             .catch((error: Response) => Observable.throw(error.json()));
     }
 
-    login(user: User) {
+    login(user: User) {//send only uName/pw -&- fetch rest of fields from db
         const body = JSON.stringify(user);
         return this.http.post('http://localhost:8080/auth/login', body, {headers: headers})
-            .map((response: Response) => response.json())
+            .map((response: Response) => response.json()) //sent as DATA to authService.login(user).subscribe(data=>...)
             .catch((error: Response) => Observable.throw(error.json()));
     }
 
