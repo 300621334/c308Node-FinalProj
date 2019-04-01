@@ -49,6 +49,7 @@ export class TasksComponent {
      dateCreated:this.dateCreated
 
   }
+  console.log(newTask);
   
   this.taskService.addTask(newTask)
       .subscribe(task => {

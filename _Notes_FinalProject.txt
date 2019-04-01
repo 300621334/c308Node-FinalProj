@@ -6,7 +6,8 @@
 Nurse ID 9123 uName/pw n/n
 pt ID 123 a/a
 pt ID 456 b/b
-
+-----------------------
+IF creation of records in db behaves wierd... db metaData might be corrupted... db.dropDatabase() & create users again
 ================================
 cmd >> mongod
 Login page is at port=8080...

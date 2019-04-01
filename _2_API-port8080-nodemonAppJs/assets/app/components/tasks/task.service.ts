@@ -18,10 +18,10 @@ export class TaskService {
             .map((response: Response) => response.json())
             .catch((error: Response) => Observable.throw(error.json()));
     }
-    // addTask(newTask){
-    //     var headers = new Headers();
-    //     headers.append('Content-Type', 'application/json');
-    //     return this.http.post('/book', JSON.stringify(newTask), {headers: headers})
-    //         .map(res => res.json());
-    // }
+    addTask(newTask){
+        var headers = new Headers();
+        headers.append('Content-Type', 'application/json');
+        return this.http.post('/book', JSON.stringify(newTask), {headers: headers})
+            .map(res => res.json());
+    }
 }
