@@ -1,3 +1,7 @@
+(1) cmd >> mongod
+(2) cd _1_NgApp... >>> npm start
+(3) cd client >>> npm start  ###ignore ERRs
+(4) cd ../_2_API-port8080 >>> npm start >>> npm run build
 ================================
 cmd >> mongod
 Login page is at port=8080...
@@ -5,8 +9,10 @@ Login page is at port=8080...
 cd _1_NgApp >> npm start >> localhost:3000
 Then run _2_API >> nodemon app.js
 ------
+*******/client/ dir has it's own package.json hence:-
 aft changes to .ts files (even thou I get err but still compiles .ts to .js):
-cd client >>npm start
+>>> cd client 
+>>> npm start
 ================================
 cmd >> cd _2_API-port8080-nodemonAppJs
 >>>npm start

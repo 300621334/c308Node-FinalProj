@@ -16,10 +16,13 @@ export class UserHomeComponent {
     _books: Array<Book> = [];
     _availablebooks: Array<Book> = [];
     studentid: string;
+    urlAftLogin:string;
+
     constructor(private authService: AuthService, private userhomeservice: UserHomeService, private router: Router) {
         this.username = authService.userName();
         this.fullname = authService.fullName();
         this.studentid = authService.stuentid();
+        this.urlAftLogin = 'http://localhost:3000/?studentid=' + this.studentid;
         this.doInit();
     }
     doInit() {

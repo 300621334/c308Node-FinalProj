@@ -46,7 +46,7 @@ app.use(express.static(path.join(__dirname, 'client')));
 app.use(cookieParser());
 // Body Parser MW
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.urlencoded({extended: true}));
 
 app.use('/', index);
 app.use('/api', tasks);

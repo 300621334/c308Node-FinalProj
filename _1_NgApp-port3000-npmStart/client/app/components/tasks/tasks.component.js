@@ -15,10 +15,12 @@ var TasksComponent = /** @class */ (function () {
     function TasksComponent(taskService) {
         var _this = this;
         this.taskService = taskService;
+        this.isNurse = true; //only nurse can see records of ALL patients
         this.taskService.getTasks()
             .subscribe(function (tasks) {
             //console.log(tasks);
             _this.tasks = tasks;
+            //this.isNurse = false;
         });
     }
     TasksComponent.prototype.addTask = function (event) {

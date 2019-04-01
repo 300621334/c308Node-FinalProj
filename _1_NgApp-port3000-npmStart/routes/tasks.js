@@ -1,14 +1,32 @@
 var express = require('express');
 var router = express.Router();
 let courseModel=require('../model/course.model')
+var store = require('store');//https://www.npmjs.com/package/store
+
 //Get All Task
 router.get('/tasks', function(req, res, next){
-    courseModel.find(function(err,course){
+    console.log('In tasks.js: ' + store.get('studentid').studentid)
+    var studentid = store.get('studentid').studentid + '';
+    var isPatient = studentid.charAt(0) !== '9';//Nurses' IDs start w 9
+    if(!isPatient)
+    {
+         courseModel.find(function(err,course){
         if(err){
             res.send(err);
         }
-        res.json(course);
-    });
+        res.json(course);   
+        });
+    }
+    else//records for this patient ONLY
+    {
+        courseModel.find({title:studentid}, function(err,course){
+            if(err){
+                res.send(err);
+            }
+            res.json(course);   
+            });
+    }
+   
 });
 //Get single Task
 router.get('/task/:id', function(req, res, next){

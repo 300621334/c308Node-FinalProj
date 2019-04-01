@@ -27,42 +27,46 @@
             <br>
             <table class="table table-bordered table-striped table-hover">
                 <!-- Header Row-->
-                <tr>
-                    <th class="text-center">Patient ID</th>
-                    <th class="text-center">Patient Name</th>
-                    <th class="text-center">Temperature</th>
-                    <th class="text-center">Heart Rate</th>
-                    
-                    
-
-                    <th class="text-center">Respiratory</th>
-                    <th class="text-center">Blood Pressure</th>
-                    <th class="text-center">Tip-Video</th>
-                    <th class="text-center">Emergency Email</th>
-                    <th class="text-center">Reading Date</th>
-                    <th class="text-center"></th>
-                   
-                </tr>
+                <thead>
+                    <tr>
+                        <th class="text-center">Patient ID</th>
+                        <th class="text-center">Patient Name</th>
+                        <th class="text-center">Temperature</th>
+                        <th class="text-center">Heart Rate</th>
+                        
+                        
+    
+                        <th class="text-center">Respiratory</th>
+                        <th class="text-center">Blood Pressure</th>
+                        <th class="text-center">Tip-Video</th>
+                        <th class="text-center">Emergency Email</th>
+                        <th class="text-center">Reading Date</th>
+                        <th class="text-center"></th>
+                       
+                    </tr>
+                </thead>
   
                 <!-- Repeatable Template Row -->
-                    <tr *ngFor="let task of tasks">
-                        <td class="text-center">{{task.title}}</td>
-                        <td class="text-center">{{task.isbn}}</td>
-                        <td class="text-center">{{task.section}}</td>
-                        <td class="text-center">{{task.author}}</td>
-                        
-                        
-
-                       <td class="text-center">{{task.respRate}}</td>
-                        <td class="text-center">{{task.bloodPress}}</td>
-                        <td class="text-center"><a href="{{task.tipOfDay}}" target="_blank">{{task.tipOfDay}}</a></td>
-                        <td class="text-center"><a href="mailto:{{task.emergEmail}}">{{task.emergEmail}}</a></td>
-                        <td class="text-center">{{task.dateCreated}}</td>
-  
-                        <td class="text-center">
-                            <input class="btn btn-danger" type="button" (click)="deleteTask(task._id)"  value='Delete' >      
-                        </td>
-                    </tr>
+                    <tbody  *ngIf="isNurse">
+                        <tr *ngFor="let task of tasks">
+                            <td class="text-center">{{task.title}}</td>
+                            <td class="text-center">{{task.isbn}}</td>
+                            <td class="text-center">{{task.section}}</td>
+                            <td class="text-center">{{task.author}}</td>
+                            
+                            
+    
+                           <td class="text-center">{{task.respRate}}</td>
+                            <td class="text-center">{{task.bloodPress}}</td>
+                            <td class="text-center"><a href="{{task.tipOfDay}}" target="_blank">{{task.tipOfDay}}</a></td>
+                            <td class="text-center"><a href="mailto:{{task.emergEmail}}">{{task.emergEmail}}</a></td>
+                            <td class="text-center">{{task.dateCreated}}</td>
+      
+                            <td class="text-center">
+                                <input class="btn btn-danger" type="button" (click)="deleteTask(task._id)"  value='Delete' >      
+                            </td>
+                        </tr>
+                    </tbody>
             </table>
   
         </div>

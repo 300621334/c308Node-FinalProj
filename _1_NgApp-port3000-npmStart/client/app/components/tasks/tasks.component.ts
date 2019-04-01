@@ -19,12 +19,14 @@ export class TasksComponent {
     tipOfDay:string;  
   emergEmail:string;
  dateCreated:string;
+ isNurse:boolean = true;//only nurse can see records of ALL patients
  
   constructor(private taskService: TaskService) {
     this.taskService.getTasks()
       .subscribe(tasks => {
         //console.log(tasks);
         this.tasks = tasks;
+        //this.isNurse = false;
       });
   }
 
