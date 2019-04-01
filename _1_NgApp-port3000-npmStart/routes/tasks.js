@@ -6,7 +6,7 @@ var store = require('store');//https://www.npmjs.com/package/store
 //Get All Task
 router.get('/tasks', function(req, res, next){
     console.log('In tasks.js: ' + store.get('studentid').studentid)
-    var studentid = store.get('studentid').studentid + '';
+    var studentid = store.get('studentid').studentid + '';//unique ID of loggedin user
     var isPatient = studentid.charAt(0) !== '9';//Nurses' IDs start w 9
     if(!isPatient)
     {
@@ -14,7 +14,7 @@ router.get('/tasks', function(req, res, next){
         if(err){
             res.send(err);
         }
-        res.json(course);   
+        res.json({course:course});   
         });
     }
     else//records for this patient ONLY
@@ -23,7 +23,7 @@ router.get('/tasks', function(req, res, next){
             if(err){
                 res.send(err);
             }
-            res.json(course);   
+            res.json({course:course , userId: studentid});   
             });
     }
    
